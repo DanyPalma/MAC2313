@@ -1,0 +1,81 @@
+\documentclass{article} 
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\newtheorem{theorem}{Theorem}
+\usepackage{enumitem}
+\usepackage{mathtools, amssymb, amsthm} % imports amsmath
+
+\author{Daniel Palma}
+\date{\today}
+\title{Quiz 10/12/2023}
+
+\begin{document}
+
+\maketitle
+\newpage
+
+\tableofcontents
+\newpage
+
+\section{Local Min/Max \& Saddles}
+
+\subsection{First Derivative Test}
+
+
+If a differentiable function $f$ has a local maximum or minimum at $(a,b)$ then the following is true $(\nabla f) \bigg\rvert_{(a,b)} = \langle 0,0 \rangle$
+
+
+\subsection{Second Derivative Test}
+
+If $(a,b)$ is a critical point of f, meaning $(\nabla f) \bigg\rvert_{(a,b)} = \langle 0,0 \rangle$, then the following statements are true for the second Derivative test, $D$:
+
+$D = f_{xx}(a,b)f_{yy}(a,b) - (f_{xy}(a,b))^2$
+
+\begin{itemize}
+    \item If$ D > 0$ and $f_{xx}(a,b) > 0$ then $f(a,b)$ is a local minimum
+    \item If $D > 0$ and $f_{xx}(a,b) < 0 $ then $f(a,b)$ is a local maximum
+    \item If $D < 0$ then $f(a,b)$ is a saddle point
+    \item If $D = 0$ then the test is inconclusive
+\end{itemize}
+
+\section{Directional Derivatives}
+
+The Directional Derivative of F in the direction u is denoted as follows:
+
+$$D_uf = \nabla f \cdot \vec{u}$$
+
+thus, at any point $(x_0, y_0)$
+
+$$D_uf_{(x_0, y_0)} = f_x(x_0, y_0)u_x + f_y(x_0, y_0)u_y$$
+
+a gradient / vector of three variables follows the same conventions
+
+$$D_uf_{(x_0, y_0, z_0)} = f_x(x_0, y_0, z_0)u_x + f_y(x_0, y_0, z_0)u_y + f_z(x_0, y_0, z_0)u_z$$
+
+\section{Gradient Vector}
+
+the gradient vector of a differentiable function $f$ is denoted as follows:
+
+$$\nabla f = \langle f_x, f_y \rangle$$
+
+\subsection{Properties of the Gradient Vector}
+
+If $\gamma$ is the angle between $\nabla f$ and $\vec{u}$ then the following is true:
+
+$$D_uf = |\nabla f| cos(\gamma)$$
+
+this gives us the following properties:
+
+\begin{itemize}
+    \item The function f increases the fastest when $\vec{u}$ is in the same direction as $\nabla f$, thus the maximum increase rate of f is $|\nabla f|$
+    \item The function f decreases the fastest when $\vec{u}$ is in the opposite direction as $\nabla f$, thus the maximum decrease rate of f is $-|\nabla f|$
+    \item Since the function $f$ does not change along level curve or surfaces, ($D_uf = 0$) then $\nabla f$ is perpendicular to the level curves or level surfaces
+\end{itemize}
+
+this means that if asked to find the direction of maximum increase at an arbitrary point $(x_0,y_0)$, the answer would be the direction of the gradient vector at that point.
+
+$\nabla f = \langle f_x, f_y \rangle$ 
+
+(so to find any point just plug into this)
+
+\end{document}
