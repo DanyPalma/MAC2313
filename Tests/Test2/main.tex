@@ -221,8 +221,21 @@ $$D = f_{xx}(a,b)f_{yy}(a,b) + (f_{xy}(a,b))^2$$
 we can now classify a point $(a,b)$ as follows:
 
 \begin{itemize}
-    \item 
+    \item If $D > 0$ and $f_{xx}(a,b) >0$ then $(a,b)$ is a local minimum
+    \item If $D>0$ and $f_{xx}(a,b)<0$ then $(a,b)$ is a local maximum
+    \item If $D<0$ then $(a,b)$ is a Saddle point
+    \item If $D=0$ then the test is inconclusive
 \end{itemize}
+
+\subsection{Absolute Maximum and Minimum Values}
+
+To find the absolute maximum and minimum values of a continuous function $f$ on a closed, bounded set $D$:
+
+\begin{enumerate}
+    \item Find the values of $f$ at the critical points of $f$ in $D$.
+    \item Find the extreme values of $f$ on the boundary of $D$.
+    \item The largest of the values from steps 1 and 2 is the absolute maximum value; the smallest is the absolute minimum value.
+\end{enumerate}
 
 \newpage
 \section{Double Integrals over Rectangles}
