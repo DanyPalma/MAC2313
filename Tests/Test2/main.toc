@@ -1,0 +1,23 @@
+\contentsline {section}{\numberline {1}Partial Derivatives}{4}{}%
+\contentsline {subsection}{\numberline {1.1}Interpretation}{4}{}%
+\contentsline {subsection}{\numberline {1.2}Examples}{4}{}%
+\contentsline {subsection}{\numberline {1.3}Higher Derivatives}{4}{}%
+\contentsline {section}{\numberline {2}Tangent Planes and Linear Approximations}{5}{}%
+\contentsline {subsection}{\numberline {2.1}Tangent Planes}{5}{}%
+\contentsline {subsection}{\numberline {2.2}Linear Approximations}{5}{}%
+\contentsline {subsection}{\numberline {2.3}Total Differential}{5}{}%
+\contentsline {subsection}{\numberline {2.4}Three or more variables}{5}{}%
+\contentsline {section}{\numberline {3}Chain Rule}{6}{}%
+\contentsline {section}{\numberline {4}Directional Derivatives and the Gradient Vector}{7}{}%
+\contentsline {subsection}{\numberline {4.1}Directional Derivative}{7}{}%
+\contentsline {subsection}{\numberline {4.2}Gradient Vector}{7}{}%
+\contentsline {section}{\numberline {5}Shapes of Functions !!TODO!!}{8}{}%
+\contentsline {section}{\numberline {6}Maximum and Minimum Values}{9}{}%
+\contentsline {section}{\numberline {7}Double Integrals over Rectangles}{10}{}%
+\contentsline {section}{\numberline {8}Double Integrals over General Regions}{11}{}%
+\contentsline {section}{\numberline {9}Double Integrals over Polar Coordinates}{12}{}%
+\contentsline {section}{\numberline {10}How to Graph Regions when Taking Integrals !!TODO!!}{13}{}%
+\contentsline {section}{\numberline {11}Applications of Double Integrals}{14}{}%
+\contentsline {section}{\numberline {12}Surface Area}{15}{}%
+\contentsline {section}{\numberline {13}Review Sheet Problems and Solutions}{16}{}%
+\contentsline {section}{\numberline {14}Formula Sheet}{17}{}%
