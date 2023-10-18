@@ -48,10 +48,7 @@
     \item Maximum and Minimum Values
     \item Double Integrals over Rectangles
     \item Double Integrals over General Regions
-    \item Double Integrals over Polar Coordinates 
     \item How to Graph Regions when Taking Integrals
-    \item Applications of Double Integrals 
-    \item Surface Area 
 \end{itemize}
 
 
@@ -237,23 +234,118 @@ To find the absolute maximum and minimum values of a continuous function $f$ on 
     \item The largest of the values from steps 1 and 2 is the absolute maximum value; the smallest is the absolute minimum value.
 \end{enumerate}
 
+I'm gonna be honest i dont really fucking know how to do this one we ball
+
 \newpage
 \section{Double Integrals over Rectangles}
+
+The \textbf{double integral} of $f$ over the rectangle $R$ is
+$$\iint\limits_{R}f(x,y)\mathrm{d}A = \lim_{m,n \rightarrow \infty}\sum_{i=1}^{m}\sum_{j=1}^{n}f(x_{ij}^*, y_{ij}^*)\Delta A$$
+
+if this limit exists.
+
+Thus, if $f(x,y) \geq 0$, then the volume $V$ of the solid that lies above the rectangle $R$ and below the surface $z = f(x,y)$ is 
+
+$$V = \iint\limits_{R}f(x,y)\mathrm{d}A$$
+
+\subsection{Iterated Integrals}
+
+this is just the nicer way of doing shit tbh
+
+either of the following
+
+$$\int^b_a\int^d_cf(x,y)dy dx$$
+
+$$\int^d_c\int^b_af(x,y)dxdy$$
+
+so whichever one on the inside that's the respective partial integration
+
+in the first one, we would integrate with respect to y first and then x, and vice versa in the second one.
+
+Iterated Integrals are much nicer so we have "Fubini" to thank for his amazing theorem 
+
+If $f$ is continuous on the rectangle blah blah (this is fubinis theorem)
+
+$$\iint\limits_{R}f(x,y)\mathrm{d}A = \int^b_a\int^d_cf(x,y)dy dx  = \int^d_c\int^b_af(x,y)dxdy$$
+
+
+\subsection{Average Value}
+
+ We define the \textbf{average value} of a function $f$ of two variables defined on a rectangle $R$ to be
+
+$$f_{ave} = \frac{1}{A(R)}\iint\limits_{R}f(x,y)\mathrm{d}A$$
+
+Where $A(R)$ is the area of R
+
 
 \newpage
 \section{Double Integrals over General Regions}
 
-\newpage
-\section{Double Integrals over Polar Coordinates}
+(domains i guess)
+
+We can suppose $D$ is a bounded region, we can say that if $F$ is integrable over $R$ ( a rectangle formed around $D$ ) we can define the \textbf{double integral of $f$ over $D$} by 
+
+$$\iint\limits_{D}f(x,y)\mathrm{d}A = \iint\limits_{R}F(x,y)\mathrm{d}A$$
+
+\subsubsection*{Type 1 Regions}
+
+A plane region $D$ is said to be of \textbf{type I} if it lies between the graphs of two continuous functions of x (y = a function of x)
+
+and can be given the following formula
+
+$$\iint\limits_{D}f(x,y)\mathrm{d}A = \int^b_a\int^{g_2(x)}_{g_1(x)} f(x,y) dy dx$$
+
+\subsubsection*{Type 2 Regions}
+
+A plane region $D$ is said to be of \textbf{type II} if it lies between the graphs of two continuous functions of y (x = a function of y)
+
+and can be given the following formula
+
+$$\iint\limits_{D}f(x,y)\mathrm{d}A = \int^d_c\int^{h_2(y)}_{h_1(y)} f(x,y) dx dy$$
+
+\subsection{Properties of Double Integrals}
+
+We assume that all of the following integrals exist.
+
+\begin{enumerate}
+    \item $\iint\limits_{D}[f(x,y) + g(x,y)]\mathrm{d}A = \iint\limits_{D}f(x,y)\mathrm{d}A + \iint\limits_{D}g(x,y)\mathrm{d}A$
+    \item $\iint\limits_{D}cf(x,y)\mathrm{d}A = c \iint\limits_{D}f(x,y)\mathrm{d}A$
+\end{enumerate}
+
+If $f(x,y) \geq g(x,y)$ for all $(x,y)$ in $D$
+
+\begin{enumerate}
+    \item $\iint\limits_{D} f(x,y) \mathrm{d}a \geq \iint\limits_{D}g(x,y) \mathrm{d}A$
+\end{enumerate}
+
+The next property is the same as when you split an integrals region from $a \rightarrow b  = a \rightarrow c + c \rightarrow b$
+
+$$\iint\limits_{D}f(x,y)\mathrm{d}A = \iint\limits_{D_1}f(x,y)\mathrm{d}A + \iint\limits_{D_2}f(x,y)\mathrm{d}A$$
+
+where $D = D_1 \cup D_2 $,$D_1$ and $D_2$ dont overlap except perhaps on their boundaries
+
+This property is especially useful when a region does not classify as either Type I nor Type II but can be expressed as a union of regions of type I or type II
+
+This next property of integrals says that if we integrate the constant function $f(x,y) = 1$ over a region $D$ we get the area of $D$:
+
+$$\iint\limits_{D}1\mathrm{d}A = A(D)$$
 
 \newpage
 \section{How to Graph Regions when Taking Integrals !!TODO!!}
 
-\newpage
-\section{Applications of Double Integrals}
+\section{Triple Integrals (short section)}
 
-\newpage
-\section{Surface Area}
+    Find the total amount of $f(x,y,z)$ on $E$
+
+    Definition of the triple integral
+
+    $$\iiint\limits_{E}f(x,y,z)\mathrm{d}V$$
+
+    \subsection{Type I 3D region}
+
+    \subsection{Type II 3D region}
+
+    \subsection{Type III 3D region}
 
 \newpage
 \section{Review Sheet Problems and Solutions}
