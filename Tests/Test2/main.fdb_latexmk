@@ -1,6 +1,6 @@
 # Fdb version 3
-["pdflatex"] 1697647776 "/Users/dany/Projects/Fall23/MAC2313/Tests/Test2/main.tex" "main.pdf" "main" 1697647776
-  "/Users/dany/Projects/Fall23/MAC2313/Tests/Test2/main.tex" 1697647775 12847 5a5ea7ff12d61b7bdd32a0d90df79f7f ""
+["pdflatex"] 1697673353 "/Users/dany/Projects/Fall23/MAC2313/Tests/Test2/main.tex" "main.pdf" "main" 1697673353
+  "/Users/dany/Projects/Fall23/MAC2313/Tests/Test2/main.tex" 1697673353 13155 365888ded25ebad132b3dcf2a590ff13 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1136849721 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/tfm/jknappen/ec/tcrm1000.tfm" 1136768653 1536 e07581a4bb3136ece9eeb4c3ffab8233 ""
@@ -74,9 +74,9 @@
   "/usr/local/texlive/2022/texmf-var/web2c/pdftex/pdflatex.fmt" 1674601221 2826446 341e65cfce1e3ab4a33c39269e8e4d87 ""
   "/usr/local/texlive/2022/texmf.cnf" 1647878952 577 209b46be99c9075fd74d4c0369380e8c ""
   "dptree.png" 1697493729 14236 002b83028422a1e8d4a470b3f7e235d5 ""
-  "main.aux" 1697647776 3267 0796725c23bc1235fa8fc86c4f7f6e61 "pdflatex"
-  "main.tex" 1697647775 12847 5a5ea7ff12d61b7bdd32a0d90df79f7f ""
-  "main.toc" 1697647776 2086 98271cb879895b2a385989058f2f45c9 "pdflatex"
+  "main.aux" 1697673353 4533 c81ee1a6c470208289c309e36c97da8c "pdflatex"
+  "main.tex" 1697673353 13155 365888ded25ebad132b3dcf2a590ff13 ""
+  "main.toc" 1697673353 2860 4c1902744c9a61a05dbfbeb8fbd89e44 "pdflatex"
   (generated)
   "main.aux"
   "main.log"
