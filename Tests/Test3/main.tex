@@ -352,6 +352,38 @@ a \textbf{simply-connected region} in the plane is a connected region $D$  such 
 \newpage
 \section{Green's Theorem}
 
+Green's Theorem gives the relationship between a line integral around a simple closed curve $C$ and a double integral over the plane region $D$ bounded by $C$. In stating Green's theorem, we use the convension that the \textbf{positive orientation} of a simple closed curve $C$ refers to a single \textit{counterclockwise} traversal of $C$. Thus if $C$ is given by the vector function $\mathbf{r}(t)$, $a \leq t \leq b$, then the region $D$ is always on the left as the point $\mathbf{r}(t)$ traverses $C$.
+\\
+
+\begin{center}
+    \textbf{Green's Theorem} Let $C$ be a positively oriented, piecewise-smooth, simple closed curve in the plane and let $D$ be the region bounded by $C$. If $P$ and $Q$ have continuous partial derivative on an open region that contains $D$, then 
+
+    \begin{equation*}
+        \int_C P \ dx + Q \ dy = \iint\limits_{D} (\frac{\partial Q}{\partial x} - \frac{\partial P}{\partial y} \ \mathrm{d}A)
+    \end{equation*}
+\end{center}
+
+Note: the notation 
+
+\begin{equation*}
+    \oint_C P \ dx + Q \ dy 
+\end{equation*}
+
+is sometimes used to indicate that the line integral is calculated using the positive orientation of the closed curve $C$. Another notation for the positively oriented boundary curve of $D$ is $\partial D$, so the equation in Green's Theorem can be written as 
+
+\begin{equation*}
+    \iint\limits_{D}(\frac{\partial Q}{\partial x} - \frac{\partial P}{\partial y}) \ \mathrm{d}A = \int_{\partial D} P \ dx + Q \ dy
+\end{equation*}
+
+Green's Theorem should be regarded as the counterpart of the Fundamental Theorem of Calculus for double integrals. Compare the first equation with the statement of the Funadmental Theorem of Calculus Part 2 in the following equation:
+
+\begin{equation*}
+    \int_{a}^{b}F'(x) \ dx = F(b) - F(a)
+\end{equation*}
+
+In both cases there is an integral involving derivatives ($F', \partial Q / \partial x, and \partial P / \partial y$) on the left side of the equation. And in both cases the right side involves the values of the original functions ($F, Q,$ and $P$) only on the \textit{boundary} of the domain. (In the one-dimensional case, the domain is an interval $[a,b]$ whose boudnary consists of just two points, $a$ and $b.$)
+
+Green's Theorem is not easy to prove in general, NO SHIT!!!!
 
 
 \newpage
