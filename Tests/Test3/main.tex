@@ -115,6 +115,37 @@ lets goo!!!!!!
 \newpage
 \section{Vector Fields}
 
+\begin{center}
+    In general, a vector field is a function whose domain is a set of points in $\mathbb{R}^2$ (or $\mathbb{R}^3$ in three dimensions) is a function $\mathbf{F}$ that assigns to each point $(x,y)$ in $D$ a two-dimensional vector $\mathbf{F}(x,y)$. 
+\end{center}
+
+The best way to picture a vector field is to draw the arrow represending the vector $\mathbf{F}(x,y)$ starting at the point $(x,y)$. Of course it's impossible to do this for all points $(x,y)$, but we can gain a reasonable impression of $\mathbf{F}$ by doing it for a few representative points in $D$. since $\mathbf{F}(x,y)$ is a two-dimensional vector, we can write it in terms of its \textbf{component functions} $P$ and $Q$ as follows:
+
+$$\mathbf{F}(x,y) = P(x,y)\hat{i} + Q(x,y) \hat{j} = \langle P(x,y), Q(x,y) \rangle$$
+
+or, for short, $\mathbf{F} = P \ \mathbf{i} + Q \  \mathbf{j}$
+
+Notice that $P$ and $Q$ are scalar functions of two variables and are sometimes called \textbf{scalar fields} to distinguish them from vector fields.
+
+\begin{center}
+    Let $E$ be a subset of $\mathbb{R}^3$. a \textbf{vector field on} $\mathbb{R}^3$ is a function \textbf{F} that assigns each point $(x,y,z)$ in $E$ a three-dimensional vector $\mathbf{F}(x,y,z)$.
+\end{center}
+
+\subsection{Gradient Fields}
+
+if $f$ is a scalar function of two variables, recall that $\nabla f$ is defined by $\nabla f(x,y) = f_x(x,y)\mathbf{i} + f_y(x,y)\mathbf{j} $
+\\ 
+\\
+Therefore, $\nabla f$ is really a vector field on $\mathbb{R}^2$ and is called a \textbf{gradient vector field}. Likewise, if $f$ is a scalar function of three variables (it extends but im too lazy to type this out).
+
+The length of the gradient vector is the value of the directional derivative of $f$ and closely spaced level curves indicate a steep graph.
+\\ 
+\\
+A vector field $\mathbf{F}$ is called a \textbf{conservative vector field} if it is the gradient of some scalar function, that is, if there exists a function $f$ such that $\mathbf{F} = \nabla f$. in this situation $f$ is called a \textbf{potential function} for \textbf{F}.
+
+Not all vector fields are conservative though!!
+
+
 \newpage
 \section{Line Integrals}
 
