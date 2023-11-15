@@ -286,8 +286,73 @@ but importantly, notice this is actually the same integral from earlier, therefo
 \newpage
 \section{The Fundamental Theorem of Line Integrals}
 
+If we think of the gradient vector $\nabla f$ of a function $f$ of two or three variables as a sort of derivative of $f$, then the following theorem can be regarded as a version of the Fundamental Theorem for line integrals. 
+\\
+
+Let $C$ be a smooth curve given by the vector function $\mathbf{r}(t)$, $a \leq t \leq b$. let $f$ be a differentiable function of two or three variables whose gradient vector $\nabla f$ is continuous on $C$. Then
+\begin{equation*}
+    \int_C \nabla f \cdot d \mathbf{r} = f(\mathbf{r}(b)) - f(\mathbf{r}(a))
+\end{equation*}
+
+this says that we can evaluate the line integral of a conservative vector field (the gradient vector field of the potential function $f$) simply by knowing the value of $f$ at the endpoints of $C$. In fact, this says that the line integral of $\nabla f$ is the net change in $f$. if $f$ is a function of two variables and $C$ is a plane curve with initial pint $A(x_1, y_1)$ and terminal point $B(x_2,y_2)$ then the formula from before becomes 
+
+\begin{equation*}
+    \int_C \nabla f \cdot d \mathbf{r} = f(x_2,y_2) - f(x_1, y_1)
+\end{equation*}
+
+if $f$ is a function of three variables and $C$ is a space curve joining the point $A(x_1, y_1, z_1)$ to the point $B(x_2, y_2, z_2)$, then we have
+
+\begin{equation*}
+    \int_C \nabla f \cdot d \mathbf{r} = f(x_2,y_z,z_2) - f(x_1, y_1, z_1)
+\end{equation*}
+
+\subsection{Independence of Path}
+
+Suppose $C_1$ and $C_2$ are two piecewise-smooth curves (which are called \textbf{paths}) that have the same initial point $A$ and terminal point $B$. One implication of the theorem from above is that 
+
+\begin{equation*}
+    \int_{C_1} \nabla f \cdot d \mathbf{r} = \int_{C_2} \nabla f \cdot d \mathbf{r} 
+\end{equation*}
+
+so whenever $\nabla f$ is continuous, the line integral of a \textit{conservative} vector field depends only on the initial point and the terminal point of a curve.
+
+In general, if \textbf{F} is a continuous vector field with domain $D$, we say that the line integral $\int_C \mathbf{F} \cdot d \mathbf{r}$ is \textbf{independent of path} if $\int_{C_1} \mathbf{F} \cdot d \mathbf{r} = \int_{C_2} \nabla f \cdot d \mathbf{r}$ for any two paths $C_1$ and $C_2$ in $D$ that have the same initial points and the same terminal points. With this terminology, we can say that \textit{line integrals of conservative vector fields are independent of path.}
+
+A curve is called \textbf{closed} if its terminal point coincides with its initial point, that is, $\mathbf{r}(b) = \mathbf{r}(a)$.
+
+\begin{center}
+    $\int_C \mathbf{F} \cdot d \mathbf{r}$ is independent of path in $D$ if and only if $\int_C \mathbf{F} \cdot d \mathbf{r} = 0$ for every closed path $C$ in $D$. 
+\end{center}
+
+\begin{center}
+    Suppose $\mathbf{F}$ is a vector field that is continuous on an open connected region $D$. if $\int_C \mathbf{F} \cdot d \mathbf{r}$ is independent of path in $D$, then $\mathbf{F}$ is a conservative vector field on $D$; that is, there exists is a function $f$ such that $\nabla f = \mathbf{F}$. 
+\end{center}
+
+\subsection{Conservative Vector Fields}
+
+If $\mathbf{F}(x,y) = P(x,y) \ \mathbf{i}  + Q(x,y) \ \mathbf{j}$ is a conservative vector fiekd, where $P$ and $Q$ have continuous first-order partial derivatives on a domain $D$, then throughout $D$ we have 
+
+\begin{equation*}
+    \frac{\partial P}{\partial y} = \frac{\partial Q}{\partial x}
+\end{equation*}
+
+a \textbf{simple curve} does not intersect itself anywhere between its end points
+
+a \textbf{simply-connected region} in the plane is a connected region $D$  such that every simple closed curve in $D$ encloses only points that are in $D$.
+
+\begin{center}
+    Let $\mathbf{F} = P \ \mathbf{i} + Q \ \mathbf{j}$ be a vector field on an open simply-connected region $D$. Suppose that $P$ and $Q$ have continuous first-order partial derivatives and 
+
+    \begin{equation*}
+        \frac{\partial P}{ \partial y} = \frac{\partial Q}{ \partial x} \qquad \text{throughout } D 
+    \end{equation*}
+\end{center}
+
+
 \newpage
 \section{Green's Theorem}
+
+
 
 \newpage
 \section{Curl and Divergence}
