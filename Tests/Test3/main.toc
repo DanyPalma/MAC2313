@@ -1,3 +1,8 @@
-\contentsline {section}{\numberline {1}Triple Integrals}{3}{}%
-\contentsline {section}{\numberline {2}Change of variables (Jacobians)}{3}{}%
-\contentsline {section}{\numberline {3}Curl}{4}{}%
+\contentsline {section}{\numberline {1}Change of Variables (Jacobians)}{3}{}%
+\contentsline {section}{\numberline {2}Vector Fields}{4}{}%
+\contentsline {section}{\numberline {3}Line Integrals}{5}{}%
+\contentsline {section}{\numberline {4}The Fundamental Theorem of Line Integrals}{6}{}%
+\contentsline {section}{\numberline {5}Green's Theorem}{7}{}%
+\contentsline {section}{\numberline {6}Curl and Divergence}{8}{}%
+\contentsline {section}{\numberline {7}Parametric Surfaces}{9}{}%
+\contentsline {section}{\numberline {8}Surface Integrals}{10}{}%
