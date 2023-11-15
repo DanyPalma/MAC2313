@@ -149,6 +149,140 @@ Not all vector fields are conservative though!!
 \newpage
 \section{Line Integrals}
 
+In this section we define an integral that is similar to a single integral except that instead of integrating over an interval $[a,b]$, we integrate over a curve $C$. Such integrals are called \textit{line integrals} (although curve integrals would honestly be a better term imo).
+
+Lets start with a plane curve $C$ given by the parametric equations
+
+$$x = x(t) \quad y = y(t) \quad a \leq t \leq b$$
+
+or, equivalently, by the vector equation $\mathbf{r}(t) = x(t)\mathbf{i} + y(t)\mathbf{j}$, and we assume that $C$ is a smooth curve
+
+nerd shit incoming BUT this means that $\mathbf{r'}$ is continuous and $\mathbf{r}'(t) \neq 0$.
+
+so if we divide tha parameter interval $[a,b]$ into $n$ subintervals $[t_i-1, t_i]$ of equal width and we let $x_i = x(t_i)$ and $y_i = y(t_i)$, then the correesponding points $P_i(x_i,y_i)$ divide $C$ into $n$ subarcs with lengths $\Delta s_1, \Delta s_2, \dots, \Delta s_n$. we can do the blah blah blah riemann sum this is like the 8th time we've seen it so basically we get the limit of that and we get the following \\ 
+
+if $f$ is defined on a smooth curve $C$ given by $x = x(t), y = y(t), a \leq t \leq b$, then the \textbf{line integral of f along c} is 
+
+\begin{equation*}
+    \int_C f(x,y) \ ds = \lim_{n \rightarrow \infty} \sum_{i=1}^{n} f(x_i^*, y_i^*) \Delta s_i
+\end{equation*}
+
+if the limit exists
+
+
+but also its this
+
+\begin{equation*}
+    \int_C f(x,y) \ ds = \int^b_a f(x(t), y(t)) \ \sqrt{(\frac{dx}{dt})^2 + (\frac{dy}{dt})^2} \  dt
+\end{equation*}
+
+when we want to distinguis the original line integral $\int_C f(x,y) \ ds $ from others, we call it the \textbf{line integral with respect to arc length}.
+
+The following formulas say that line integrals with respect to $x$ and $y$ can also be evaluated by expressing everything in terms of $t$: $x = x(t), y = y(t), dx = x'(t)dt, dy = y'(t)dt.$
+
+\begin{equation*}
+    \int_C f(x,y) \ dx = \int^b_a f(x(t), y(t)) \ x'(t) dt 
+\end{equation*}
+
+\begin{equation*}
+    \int_C f(x,y) \ dy = \int^b_a f(x(t), y(t)) \ y'(t) dt
+\end{equation*}
+
+it frequently happens that line integrals with respect to x and y occur together, when this happens it's customary to abbreviate by writing 
+
+\begin{equation*}
+    \int_C P(x,y) \ dx + \int_C Q(x,y) \ dy = \int_C P(x,y) \ dx + Q(x,y) \ dy
+\end{equation*}
+
+when we are setting up a line integral, sometimes the most difficult thing is to think of a parametric representation for a curve whose geometric description is given. In particular, we often need to parameterize a line segment so its useful to remember that a vector representation of a line segment that starts at $\mathbf{r}_0$ and ends at $\mathbf{r}_1$ is given by 
+
+\begin{equation*}
+    \mathbf{r}(t) = (1- t) \mathbf{r}_0 + t\mathbf{r}_1 \qquad 0 \leq t \leq 1
+\end{equation*}
+
+\subsection{Line Integrals in Space}
+
+We now suppose that $C$ is a smooth space curve given by the parametric equations 
+
+\begin{equation*}
+    x = x(t) \quad y = y(t) \quad z = z(t) \quad a \leq t \leq b
+\end{equation*}
+
+or by a vector equation $\mathbf{r}(t) = x(t) \mathbf{i} + y(t) \mathbf{j} + z(t) \mathbf{k}$. if $f$ is a function of three variables that is continuous on some region containing $C$, then we define the \textbf{ line integral of $\mathbf{f}$ along $\mathbf{C}$} with respect to arc length in a similar manner to that for plane curves:
+
+\begin{equation*}
+    \int_C f(x,y,z) \ ds = \lim_{x \rightarrow \infty} \sum_{i=1}^{n} f(x_i^*, y_i^*, z_i^*) \ \Delta s_i
+\end{equation*}
+
+and we then evaluate it as follows
+
+\begin{equation*}
+    \int_C f(x,y,z) \ ds = \int_{a}^{b} f(x(t), y(t), z(t)) \sqrt{(\frac{dx}{dt})^2 + (\frac{dy}{dt})^2 + (\frac{dz}{dt})^2} \ dt
+\end{equation*}
+
+although, observe that all of these formulas can all be written in a more compact vector notation 
+
+\begin{equation*}
+    \int_{a}^{b} f(\mathbf{r}(t)) \rvert \mathbf{r}'(t) \rvert \ dt 
+\end{equation*}
+
+for the special case $f(x,y,z) = 1$, we get 
+
+\begin{equation*}
+    \int_C dz = \int_{a}^{b} \rvert \mathbf{r}'(t) \rvert \ dt = L 
+\end{equation*}
+
+where $L$ is the length of the curve $C$
+
+Line integrals along $C$ with respect to  $x, y, $ and $z$ can also be defined.
+\\
+Therefore, as with line integrals in the plane, we evaluate line integrals fo the form
+
+\begin{equation*}
+    \int_C P(x,y,z) \ dx + Q(x,y,z) \ dy + R(x,y,z) \ dz
+\end{equation*}
+
+by expressing everything $(x, y,z,d,dy,dz)$ in terms of the parameter $t$.
+
+\subsection{Line Integrals of Vector Fields}
+
+We define the \textbf{work} $W$ done by the force field \textbf{F} as the limit of the Riemann sums, namely
+
+\begin{equation*}
+    W = \int_C \mathbf{F}(x,y,z) \cdot \mathbf{T}(x,y,z) \ dx = \int_C \mathbf{F} \cdot \mathbf{T} \ ds
+\end{equation*}
+
+where \textbf{T}$(x,y,z)$ is the unit tangent vector at the point $(x,y,z)$ on $C$.
+
+If the curve $C$ is given by the vector equation $\mathbf{r}(t) = x(t) \mathbf{i} + y(t) \mathbf{j} + z(t) \mathbf{k}$, then $\mathbf{T}(t) = \frac{\mathbf{r}'(t)}{\rvert \mathbf{r}'(t) \rvert}$, so using the equation from before we can rewrite it as 
+
+\begin{equation*}
+    W = \int_{a}^{b} \mathbf{F}(\mathbf{r}(t)) \cdot \mathbf{r}'(t) \ dt
+\end{equation*}
+
+this integral is often appreviated as $\int_C \mathbf{F} \cdot \ d\mathbf{r} $, therefore we make the following definition for the line integral of any continuous vector field.
+
+Let \textbf{F} be a continuous vector field defined on a smooth curve $C$ given by a vector function $\mathbf{r}(t), a \leq t \leq b$. Then the \textbf{line integral of F along C} is 
+\begin{equation*}
+    \int_C \mathbf{F} \cdot \ d\mathbf{r} = \int_{a}^{b} \mathbf{F}(\mathbf{r}(t)) \cdot \mathbf{r}'(t) \ dt = \int_C \mathbf{F} \cdot \mathbf{T} \ ds
+\end{equation*}
+
+Notice, we can formally write $d \mathbf{r} = \mathbf{r}'(t) \ dt$
+
+Finally, we note the connection between line integrals of vector fields and line integrals of scalar fields. Suppose the vector field \textbf{F} on $\mathbb{R}^3$ is given in component for by the equation $\mathbf{F} = P \mathbf{i} + Q \mathbf{j} + R \mathbf{k} $. we use the definition from before to compute its line integral along $C$: 
+
+\begin{align*}
+    \int_C \mathbf{F} \cdot d \mathbf{r} &= \int_{a}^{b} \mathbf{F}(\mathbf{r}(t)) \cdot \mathbf{r}'(t) dt \\
+    &= \int_{a}^{b} (P \mathbf{i} + Q \mathbf{j} + R \mathbf{k}) \cdot ( x'(t) \mathbf{i} + y'(t) \mathbf{j} + z'(y) \mathbf{k}) \ dt \\
+    &= \int_{a}^{b} [P(x(t), y(t), z(t))x'(t) + Q(x(t), y(t), z(t))y'(t) + R(x(t), y(t), z(t)) z'(t)] \ dt
+\end{align*}
+
+but importantly, notice this is actually the same integral from earlier, therefore we have 
+
+\begin{equation*}
+    \int_C \mathbf{F} \cdot d \mathbf{r} = \int_C P \ dx + Q \ dy + R \ dz \qquad \text{ where $\mathbf{F} = P  \ \mathbf{i} + Q \ \mathbf{j} + R \ \mathbf{k}$}
+\end{equation*}
+
 \newpage
 \section{The Fundamental Theorem of Line Integrals}
 
