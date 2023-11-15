@@ -389,6 +389,140 @@ Green's Theorem is not easy to prove in general, NO SHIT!!!!
 \newpage
 \section{Curl and Divergence}
 
+In this section we define two operations that can be performed on vector fields and that play a basic role in the applications of vector calculus to fluid flow and electricity and magnetism. Each operation resembles differentiation, but one produces a vector field whereas the other produces a scalar field.
+
+\subsection{Curl}
+
+If $\mathbf{F} = P \ \mathbf{i} + Q \ \mathbf{j} + R \  \mathbf{k}$ is a vector field on $\mathbb{R}^3$ and the partial derivatives of $P$, $Q$, and $R$ all exist, then the curlk of $\mathbf{F}$ is the vector field on $\mathbb{R}^3$ defined by 
+
+\begin{equation*}
+    \text{curl} \ \mathbf{F} = (\frac{\partial R}{\partial y} - \frac{\partial Q}{\partial z}) \mathbf{i} + (\frac{\partial P}{\partial z} - \frac{\partial R}{\partial x}) \mathbf{j} + (\frac{\partial Q}{\partial x} - \frac{\partial P}{\partial y}) \mathbf{k}
+\end{equation*}
+
+As an aid to our memory, let's rewrite this equation using operator notation. We introduce the vector differential operator $\nabla$ ("del") as 
+
+\begin{equation*}
+    \nabla = \mathbf{i} \frac{\partial}{\partial x} + \mathbf{j} \frac{\partial}{ \partial y} + \mathbf{k} \frac{\partial}{\partial z}
+\end{equation*}
+
+If we think of $\nabla$ as a vector with components $\partial/\partial x$, $\partial/\partial y$, $\partial/\partial z$, we can also consider the formal cross product of $\nabla$ with the vector field $\mathbf{F}$ as follows:
+
+\begin{align*}
+    \nabla \times \mathbf{F} & = \begin{vmatrix}
+        \mathbf{i} & \mathbf{j} & \mathbf{k} \\[6pt]
+        \frac{\partial }{\partial x} & \frac{\partial}{\partial y} & \frac{\partial}{ \partial z} \\[6pt]
+        P & Q & R
+    \end{vmatrix} \\
+    & = \mathbf{i} \frac{\partial}{\partial x} + \mathbf{j} \frac{\partial}{ \partial y} + \mathbf{k} \frac{\partial}{\partial z} \\
+    & = \text{curl} \ \mathbf{F}
+\end{align*}
+
+So the easiest way to remember this is by the symbolic expression 
+
+\begin{equation*}
+    \text{curl } \ \mathbf{F} = \nabla \times \mathbf{F}
+\end{equation*}
+
+Recall that the gradient of a function $f$ of three variables is a vector field on $\mathbb{R}^3$ and so we can compute its curl. The following theorem says that the curl of a gradient vector field is $\mathbf{0}$
+
+If $f$ is a function of three variables that has continuous second order partial derivatives then 
+
+\begin{equation*}
+    \text{curl}(\nabla f) = \mathbf{0}
+\end{equation*}
+
+Since a conservative vector field is one for which $\mathbf{F} = \nabla f$, we can say this
+
+\begin{center}
+    If $\mathbf{F}$ is conservative, then furl $\mathbf{F} = \mathbf{0}$
+\end{center}
+
+this gives us a way of verifying that a vector field is not conservative.
+
+\subsection{Divergence}
+
+If $\mathbf{F} = P \ \mathbf{i} + Q \ \mathbf{j} + R \ \mathbf{k} $ is a vector field on $\mathbb{R}^3$ and the partial derivatives of P/x, Q/y and R/z exist, then the \textbf{divergence of F} is the function of three variables defined by 
+
+\begin{equation*}
+    div \mathbf{F} = \frac{\partial P}{\partial x} + \frac{\partial Q}{\partial y} + \frac{\partial R}{\partial z}
+\end{equation*}
+
+Observe that curl \textbf{F} is a vector field but div \textbf{F} is a scalar field. In terms of the gradient operator $\nabla = (\partial/\partial x) \ \mathbf{i} + (\partial / \partial y) \ \mathbf{j}+ (\partial / \partial z) \ \mathbf{k}$, the divergence of \textbf{F} can be written symbolically as the dot product of $\nabla$ and $\mathbf{F}$:
+
+\begin{equation*}
+    \text{div} \  \mathbf{F} = \nabla \cdot \mathbf{F}
+\end{equation*}
+
+If $\mathbf{F}$ is a vector field on $\mathbb{R}^3$, then curl $\mathbf{F}$ is also avector field on $\mathbb{R}^3$. As such, we can compute its divergence. The next theorem shows that the result is 0.
+
+\begin{center}
+    \text{If} $\mathbf{F} = P \ \mathbf{i} + Q \ \mathbf{j} + R \ \mathbf{k}$ \text{ is a vector field on } $\mathbb{R}^3 $ \text{ and } $P, Q, $\text{ and } $R $ \text{have continuous second-order partial derivatives, then }
+\end{center}
+
+\begin{equation*}
+    \text{div curl} \ \mathbf{F} = 0
+\end{equation*}
+
+Again, the reason for the name \textit{divergence} can be understood in the context of fluid flow. if $\mathbf{F}(x,y,z)$ is the velocity of a fluid (or gas), the div $\mathbf{F}(x,y,z)$ represents the net rate of change (with respect to time) of the mass of fluid (or gas) flowing from the point $(x,y,z)$ per unit volume. In other words, div $\mathbf{F}(x,y,z)$ measures the tendency of the fluid to diverge from the point $(x,y,z)$. If div $\mathbf{F} = 0$, then $\mathbf{F}$ is said to be \textbf{incompressible}. Another differential operator occurs when we compute the divergence of a gradient vector field $\nabla f$. If $f$ is a function of three variables, we have 
+
+\begin{equation*}
+    \text{div}(\nabla f) = \nabla \cdot (\nabla f) = \frac{\partial^2 f}{\partial x^2} + \frac{\partial^2 f}{\partial y^2} + \frac{\partial^2 f} {\partial z^2} 
+\end{equation*}
+
+and this expression occurs so often that we abbreviate it as $\nabla^2 f$. The operator
+
+\begin{equation*}
+    \nabla^2 = \nabla \cdot \nabla
+\end{equation*}
+
+is called the \textbf{Laplace operator} because of its relation to \textbf{Laplace's equation}
+
+\begin{equation*}
+    \nabla^2 f = \frac{\partial^2 f}{\partial x^2} + \frac{\partial^2 f}{\partial y^2} + \frac{\partial^2 f} {\partial z^2}  = 0
+\end{equation*}
+
+We can also apply the Laplace operator $\nabla^2$ to a vector field
+
+\begin{equation*}
+    \mathbf{F} = P \ \mathbf{i} + Q \ \mathbf{j} + R \ \mathbf{k}
+\end{equation*}
+
+in terms of its components:
+
+\begin{equation*}
+    \nabla^2 \mathbf{F} = \nabla^2 P \ \mathbf{i} + \nabla^2 Q \ \mathbf{j} + \nabla^2 R \ \mathbf{k}
+\end{equation*}
+
+\subsection{Vector forms of Green's Theorem}
+
+The curl and divergence operators allow us to rewrite Green's Theorem in versions that will be useful in our later work. We suppose that the plane region $D$, its boundary curve $C$, and the functions $P$ and $Q$ satisfy the hypothesis of Green's Theorem. Then we consider the vector field $\mathbf{F} = P \ \mathbf{i} + Q \ \mathbf{j}$. Its line integral is 
+
+\begin{equation*}
+    \oint_C \mathbf{F} \cdot d \mathbf{r} = \oint_C P \ dx + Q \ dy
+\end{equation*}
+
+and regarding $\mathbf{F}$ as a vector field on $\mathbb{R}^3$ with third component 0, we have 
+
+\begin{equation*}
+    \text{curl } \mathbf{F} = \begin{vmatrix}
+        \mathbf{i} & \mathbf{j} & \mathbf{k} \\[6pt]
+        \frac{\partial }{\partial x} & \frac{\partial}{\partial y} & \frac{\partial}{\partial z} \\[6pt] 
+        P(x,y) & Q(x,y) & 0
+    \end{vmatrix} = (\frac{\partial Q}{\partial x} - \frac{\partial P}{\partial y}) \mathbf{k}
+\end{equation*}
+
+Therefore
+
+\begin{equation*}
+    (\text{curl } \mathbf{F}) \cdot \mathbf{k} = \bigg( \frac{\partial Q}{\partial x} - \frac{\partial P}{\partial y} \bigg) \mathbf{k} \cdot \mathbf{k} = \frac{\partial Q}{\partial x} - \frac{\partial P}{\partial y}
+\end{equation*}
+
+and we can now rewrite the equation in Green's Theorem in the vector form 
+
+\begin{equation*}
+    \oint_C \mathbf{F} \cdot d \mathbf{r} = \iint\limits_D (\text{curl } \mathbf{F}) \cdot \mathbf{k} \ \mathrm{d} A
+\end{equation*}
+
 \newpage
 \section{Parametric Surfaces}
 

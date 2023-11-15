@@ -12,5 +12,8 @@
 \contentsline {subsection}{\numberline {4.2}Conservative Vector Fields}{10}{}%
 \contentsline {section}{\numberline {5}Green's Theorem}{11}{}%
 \contentsline {section}{\numberline {6}Curl and Divergence}{12}{}%
-\contentsline {section}{\numberline {7}Parametric Surfaces}{13}{}%
-\contentsline {section}{\numberline {8}Surface Integrals}{14}{}%
+\contentsline {subsection}{\numberline {6.1}Curl}{12}{}%
+\contentsline {subsection}{\numberline {6.2}Divergence}{13}{}%
+\contentsline {subsection}{\numberline {6.3}Vector forms of Green's Theorem}{14}{}%
+\contentsline {section}{\numberline {7}Parametric Surfaces}{15}{}%
+\contentsline {section}{\numberline {8}Surface Integrals}{16}{}%
