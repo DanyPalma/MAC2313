@@ -18,6 +18,100 @@
 
 \section{Change of Variables (Jacobians)}
 
+In one-dimensional calculus we often use a change of variable to simplify an integrals.
+
+A change of variables can also be useful in double integrals. We have already seen one example of this: conversion to polar coordinates. The new variables $r$ and $\theta$ are related to the old variables $x$ and $y$ by the equations 
+
+$$ x = r \cos{\theta} \qquad y = r \sin{\theta} $$
+
+and the change of variables formula can we written as 
+
+$$\iint\limits_{R} f(x,y) \mathrm{d}A = \iint\limits_{S} f(r\cos{\theta}, r\sin{\theta})r \ dr \ d\theta$$
+
+Where $S$ is the region in the $r\theta$-plane that corresponds to the region $R$ in the $xy$-plane
+
+More generally, we consider a change of variables that is given by a \textbf{transformation} $T$ from the $uv$-plane to the $xy$-plane:
+
+$$x = g(u,v) \qquad y = h(u,v)$$
+
+or, as we sometimes write,
+
+$$x = x(u,v) \qquad y = y(u,v)$$
+
+We usually assume that $T$ is a \textbf{$\mathbf{C^1}$ transformation}, which means that $g$ and $h$ have continuous first-order partial derivatives.
+
+A transformation $T$ is really just a function whose domain and range are both subsets of $\mathbb{R}^2$. If $T(u_1, v_1) = (x_1.y_1)$, then the point $(x_1,y_1)$ is called the \textbf{image} of the point $(u_1, v_1)$. If no two points have the same image, $T$ is called \textbf{one-to-one}. 
+
+If $T$ is a one-to-one transformation, then it has an \textbf{inverse transformation $\mathbf{T^-1}$} from the $xy$-plane to the $uv$-plane and it may be possible to solve 
+
+$$x = x(u,v) \qquad y = y(u,v)$$
+
+for $u$ and $v$ in terms of $x$ and $y$:
+
+$$u = G(x,y) \qquad v = H(x,y)$$
+
+\subsection{Jacobian}
+
+The \textbf{Jacobian} of the transformation $T$ is given by $x = g(u,v)$ and $y = h(u,v)$ is 
+
+
+$$\frac{\partial(x,y)}{\partial(u,v)} = 
+\begin{vmatrix}
+    \frac{\partial x}{\partial u} & \frac{\partial x}{\partial v} \\[8pt]
+    \frac{\partial y}{\partial u} & \frac{\partial y}{\partial v} 
+\end{vmatrix} = \frac{\partial x}{\partial u} \frac{\partial y}{\partial v} - \frac{\partial x }{ \partial v} \frac{\partial y}{ \partial u}
+$$
+
+
+\subsection{Change of Variables in a Double Integrals}
+
+
+Supopse that $T$ is a $C^1$ tranformation whose Jacobian is nonzero and that $T$ maps a region $S$ in the $uv$- plane onto a region $R$ in the $xy$-plane. Supposed that $f$ is continuous on $R$ and that $R$ and $S$ are type I or type II plane regions. Suppose also that $T$ is one-to-one, except perhaps on the boundary of $S$. Then 
+
+$$\iint\limits_{R}f(x,y)\ \mathrm{d}A = \iint\limits_{S}f(x(u,v), y(u,v))\begin{vmatrix}
+    \frac{\partial(x,y)}{\partial(u,v)}
+\end{vmatrix} \ du \ dv$$
+
+\subsubsection{Triple Integrals}
+
+Lets use the definition of the Jacobian, extend it to three dimensions and find the formula for a triple integral and use it to derive the formula for spherical coordinates.
+
+The Jacobian of $T$ is the following $3 \times 3 $ determinant:
+
+$$\frac{\partial(x,y,z)}{\partial(u,v,w)} = \begin{vmatrix}
+    \frac{\partial x}{\partial u} & \frac{\partial x}{\partial v} & \frac{\partial x}{ \partial w} \\[6pt]
+    \frac{\partial y}{\partial u} & \frac{\partial y}{ \partial v} & \frac{\partial y}{ \partial w} \\[6pt]
+    \frac{\partial z}{ \partial u} & \frac{\partial z }{\partial v} & \frac{\partial z}{ \partial w} 
+\end{vmatrix}$$
+
+this gives us the MASSIVE formula lol:
+
+$$\iiint\limits_{R} f(x,y,z) \ \mathrm{d}V = \iiint\limits_{S} f(x(u,v,w), y(u,v,w), z(u,v,w)) \bigg\rvert \frac{\partial(x,y,z)}{\partial(u,v,w)} \bigg\rvert \ du \ dv \ dw$$
+
+now lets use this to find the formula for triple intrgration in spherical coordinates!!!! (i'm losing my fucking mind) 
+
+$$x =  \rho \sin{\phi} \cos{\theta} \qquad y = \rho \sin{\phi} \sin{\theta} \qquad z = \rho \cos{\phi}$$
+
+lets compute this absolute unit of a jacobian 
+
+\begin{align*}
+    \frac{\partial(x,y,z)}{\partial(\rho,\theta,\phi)} &= \begin{vmatrix}
+    \sin{\phi}\cos{\theta}  & -\rho\sin{\phi}\sin{\theta}  & \rho \cos{\phi} \cos{\theta} \\[6pt]
+    \sin{\phi}\sin{\theta}   & \rho \sin{\phi} \cos{\theta} & \rho \cos{\phi}\sin{\theta}  \\[6pt]
+    \cos{\phi}  & 0 & - \rho \sin(\phi)    
+    \end{vmatrix} \\ 
+    & = \cos{\phi} (-\rho^2\sin{\phi}\cos{\phi}\sin^2{\theta} - p^2\sin{\phi}\cos{\phi}\cos^2{\theta}) - \rho\sin{\phi} (\rho \sin^2{\phi}\cos^2{\theta + \rho \sin^2{\phi} \sin^2{\theta}}) \\ 
+    & = \text{(This reduces all the way to)}  \ p^2\sin{\phi}  \ \ \text{(lol)} 
+\end{align*}
+
+anyways, putting this back into our equation would give us
+
+$$\iiint\limits_{R}f(x,y,z) \ \mathrm{d}V = \iiint\limits_{S} f(\rho\sin{\phi}\cos{\theta}, \rho\sin{\phi}\sin{\theta}, \rho\sin{\phi}) \rho^2 \sin{\phi} \ d\rho \ d\theta \ d\phi$$
+
+lets goo!!!!!!
+
+
+
 \newpage
 \section{Vector Fields}
 
