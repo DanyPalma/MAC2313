@@ -1,6 +1,6 @@
 # Fdb version 3
-["pdflatex"] 1700087081 "/Users/dany/Projects/Fall23/MAC2313/Tests/Test3/main.tex" "main.pdf" "main" 1700087082
-  "/Users/dany/Projects/Fall23/MAC2313/Tests/Test3/main.tex" 1700087081 27606 eeec818f82898f3c5a1c111abefb1c9b ""
+["pdflatex"] 1700088981 "/Users/dany/Projects/Fall23/MAC2313/Tests/Test3/main.tex" "main.pdf" "main" 1700088981
+  "/Users/dany/Projects/Fall23/MAC2313/Tests/Test3/main.tex" 1700088981 31957 c541b7e5c5415c1e6e73a54e966c731a ""
   "/usr/local/texlive/2022/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
   "/usr/local/texlive/2022/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1246382020 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
@@ -73,9 +73,9 @@
   "/usr/local/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1647878959 4410336 7d30a02e9fa9a16d7d1f8d037ba69641 ""
   "/usr/local/texlive/2022/texmf-var/web2c/pdftex/pdflatex.fmt" 1674601221 2826446 341e65cfce1e3ab4a33c39269e8e4d87 ""
   "/usr/local/texlive/2022/texmf.cnf" 1647878952 577 209b46be99c9075fd74d4c0369380e8c ""
-  "main.aux" 1700087082 2167 f22d72cbc65085eea43f1ef4e242be42 "pdflatex"
-  "main.tex" 1700087081 27606 eeec818f82898f3c5a1c111abefb1c9b ""
-  "main.toc" 1700087082 1355 588669e232cedca271ec10162a1d1d03 "pdflatex"
+  "main.aux" 1700088981 2381 e4804f6de54c99038642cd475abb53f0 "pdflatex"
+  "main.tex" 1700088981 31957 c541b7e5c5415c1e6e73a54e966c731a ""
+  "main.toc" 1700088981 1487 0572881857a424f61103dc9ac8358a51 "pdflatex"
   (generated)
   "main.aux"
   "main.log"

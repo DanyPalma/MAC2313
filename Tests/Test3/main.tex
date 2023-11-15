@@ -2,6 +2,7 @@
 \usepackage[utf8]{inputenc}
 \usepackage{graphicx}
 \usepackage{enumitem}
+\graphicspath{./}
 \usepackage{mathtools, amssymb, amsthm} % imports amsmath
 
 \author{Daniel Palma}
@@ -525,6 +526,80 @@ and we can now rewrite the equation in Green's Theorem in the vector form
 
 \newpage
 \section{Parametric Surfaces}
+
+So far, we have considered special types of surfaces: cylinders, quadric surfaces, graphs of functions of two variables, and level surfaces of functions of three variables. Here we use vector functions to describe more general surfaces, called \textit{parametric surfaces}, and compute their areas. Then we take the general surface area formula and see how it applies to special surfaces
+
+In much the same way that we describe a space curve by a vector function $\mathbf{r}(t)$ of a single parameter $t$, we can describe a surface by a vector function $\mathbf{r}(u,v)$ of two parameters $u$ and $v$. We suppose
+
+\begin{equation*}
+    \mathbf{r}(u,v) = x(u,v) \ \mathbf{i} + y(u,v) \ \mathbf{j} + z(u,v) \ \mathbf{k}
+\end{equation*}
+
+is a vector-valued function defined on a region $D$ in the $uv$-plane so $x$, $y$, and $z$ the component functions of $\mathbf{r}$ are functions of two variables $u$ and $v$ with the domain $D$. the set of all points $(x,y,z)$ in $\mathbb{R}^3$ such that 
+
+\begin{equation*}
+    x = x(u,v) \qquad y = y(u,v) \qquad z = z(u,v)
+\end{equation*}
+
+and $(u,v)$ varies throughout $D$, is called a \textbf{parametric surface} $S$ and the equations above are called \textbf{parametric equations} of $S$. Each choice of $u$ and $v$ gives a point on $S$; by making all choices, we get all of $S$. In other words, the surface $S$ is traced out by the tip of the position vector $\mathbf{r}(u,v)$ as $(u,v)$ moves throughout the region $D$
+
+\subsection{Tangent Planes}
+
+We now find the tangent plane to a parametric surface $S$ traced out by a vector function 
+
+\begin{equation*}
+    \mathbf{r}(u,v) = x(u,v) \ \mathbf{i} + y(u,v) \ \mathbf{j} + z(u,v) \ \mathbf{k}
+\end{equation*}
+
+at a point $P_0$ with a position vector $\mathbb{r}(u_0, v_0)$. If we keep $u$ constant by putting $u = u_0$, then $\mathbf{r}(u_0,v)$ becomes a vector function of the single parameter $v$ and defines a grid curve $C_1$ lying on $S$. The tangent vector to $C_1$ and $P_0$ is obtained by taking the partial derivative of $\mathbb{r}$ with respect to $v$: 
+
+\begin{equation*}
+    \mathbf{r}_v    = \frac{\partial x}{\partial v}(u_0,v_0) \ \mathbf{i} + \frac{\partial y}{\partial v}(u_0,v_0) \ \mathbf{j} + \frac{\partial z}{\partial v} (u_0, v_0)  \ \mathbf{k}
+\end{equation*}
+
+Similarly, if we keep $v$ constant by putting $v = v_0$, we get a grid curve $C_2$ given by $\mathbf{r}(u,v_0)$ that lies on $S$, and its tanget vector and $P_0$ is
+
+\begin{equation*}
+    \mathbf{r}_u    = \frac{\partial x}{\partial u}(u_0,v_0) \ \mathbf{i} + \frac{\partial y}{\partial u}(u_0,v_0) \ \mathbf{j} + \frac{\partial z}{\partial u} (u_0, v_0)  \ \mathbf{k}
+\end{equation*}
+
+if $r_u \times r_v $ is not $\mathbf{0 }$ then the surface $S$ is called \textbf{smooth} (it has no "corners"). For a smooth surface, the \textbf{tangent plane} is the plane that contains the tangetn vector $r_u$ and $r_v$, and the vector $r_u \times r_v$ is a normal vector to the tangent plane.
+
+\subsection{Surface Area}
+
+Now we define the surface area of a general parametric  surface given by the equation 
+
+\begin{equation*}
+    \mathbf{r}(u,v) = x(u,v) \ \mathbf{i} + y(u,v) \ \mathbf{j} + z(u,v) \ \mathbf{k}
+\end{equation*}
+
+For simplicity, we start by consider a surface whose parameter domain $D$ is a rectangle, and we divide it into subrectangles $R_{ij}$. Let's choose $(u_i^*, v_i^*)$ to be the lower left corner of $R_{ij}$
+
+blahblah blah ri3manns sun ble gjlfjdjskflsjlkdsklds
+
+so we get the following:
+
+If a smooth parametric surface $S$ is given by the equation 
+
+\begin{equation*}
+    \mathbf{r}(u,v) = x(u,v) \ \mathbf{i} + y(u,v) \ \mathbf{j} + z(u,v) \ \mathbf{k} \qquad (u,v) \in D
+\end{equation*}
+
+and $S$ is convered just once as $(u,v)$ ranges throughout the parameter domain $D$, then the \textbf{surface area} of $S$ is 
+
+\begin{equation*}
+    A(S) = \iint\limits_{D} \rvert \mathbf{r}_u \times \mathbf{r}_v \rvert \ \mathrm{d} A
+\end{equation*}
+
+where 
+
+\begin{equation*}
+    \mathbf{r}_u = \frac{\partial x}{\partial u} \ \mathbf{i} + \frac{\partial y}{\partial u} \ \mathbf{j} + \frac{\partial z}{ \partial u} \ \mathbf{k} \qquad \mathbf{r}_v = \frac{\partial x}{\partial v} \ \mathbf{i} + \frac{\partial y}{\partial v} \ \mathbf{j} + \frac{\partial z}{ \partial v} \ \mathbf{k}
+\end{equation*}
+
+finally done with this section!!!!!
+
+
 
 \newpage
 \section{Surface Integrals}
