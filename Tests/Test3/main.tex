@@ -604,8 +604,127 @@ finally done with this section!!!!!
 \newpage
 \section{Surface Integrals}
 
+The relationship between surface integrals and surface area is much the same as the relationship between line integrals and arc length. Suppose $f$ is a function of three variables whose domains includes a surface $S$. We will define the surface integral of $f$ over $S$ in such a way that, in the case where $f(x,y,z) = 1$, the value of the surface integral is equal to the surface area of $S$. We start with parametric surfaces and then deal with the special case where $S$ is the graph of a function of two variables.
+
+\subsection{Parametric Surfaces}
+
+Suppose that a surface $S$ has a vector equation 
+
+\begin{equation*}
+    \mathbf{r}(u,v) = x(u,v) \ \mathbf{i} + y(u,v) \ \mathbf{j} + z(u,v) \ \mathbf{k} \qquad (u,v) \in D
+\end{equation*}
+
+We first assume that the parameter domain $D$ is a rectangle and we divide it into the blah blah blah we get 
+
+\begin{equation*}
+    \iint\limits_{S} f(x,y,z) \ \mathrm{d}S = \iint\limits_{D} f(\mathbf{r}(u,v)) \rvert \mathbf{r}_u \times \mathbf{r}_v   \rvert \ \mathrm{d}A
+\end{equation*}
+
+This should be compared with the formula for a line integral 
+
+\begin{equation*}
+    \int_C f(x,y,z) \ ds = \int_{a}^{b} f(\mathbf{r}(t)) \rvert \mathbf{r}'(t) \rvert \ dt
+\end{equation*}
+
+Observe also that 
+
+\begin{equation*}
+    \iint\limits_{S} 1 \ \mathrm{d}S = \iint\limits_{D} \rvert \mathbf{r}_u  \times \mathbf{r}_v  \rvert \ \mathrm{d}A = A(S)
+\end{equation*}
+
+this new formula allows is to compute a surface integral by converting it into a double integral over the parameter domain $D$. When using this formula, remember that $f(\mathbf{r}(u,v))$ is evaluated by writing $x = x(u,v)$, $y = y(u,v)$, $z = z(u,v)$ in the formula for $f(x,y,z)$.
 
 
+
+\subsection{Graphs of Functions}
+
+Any surface $S$ with equation $z = g(x,y)$ can be regarded as a parametric surface with parametric equations
+
+\begin{equation*}
+    x = x \qquad y = y \qquad z = g(x,y)
+\end{equation*}
+
+and so we have 
+
+\begin{equation*}
+    \mathbf{r}_x = \mathbf{i} + \bigg( \frac{\partial g}{\partial x} \bigg) \mathbf{k} \qquad \mathbf{r}_y = \mathbf{j} + \bigg(  \frac{\partial g}{\partial y}\bigg) \mathbf{k}
+\end{equation*}
+
+Thus
+
+\begin{equation*}
+    \mathbf{r}_x  \times \mathbf{r}_y = - \frac{\partial g }{\partial x} \ \mathbf{i} - \frac{\partial g}{\partial y} \ \mathbf{j} + \mathbf{k} 
+\end{equation*}
+
+and 
+
+\begin{equation*}
+    \bigg\rvert \mathbf{r}_x \times \mathbf{r}_y \bigg\rvert = \sqrt{(\frac{\partial z}{\partial x})^2 + (\frac{\partial z}{\partial y})^2 + 1}
+\end{equation*}
+
+Therefore, in this case, this formula becomes 
+
+\begin{equation*}
+    \iint\limits_{S} f(x,y,z) \ \mathrm{d}S = \iint\limits_{D} f(x,y,g(x,y))\sqrt{(\frac{\partial z}{\partial x})^2 + (\frac{\partial z}{\partial y})^2 + 1} \ \mathrm{d} A
+\end{equation*}
+
+Similar formulas apply when it is more conenient to project $S$ onto the $yz$-plane or $xz$-plane. For instance, if $S$ is a surface with equation $y = h(x,z)$ and $D$ is its projection onto the $xz$-plane, then
+
+\begin{equation*}
+    \iint\limits_{S} f(x,y,z) \ \mathrm{d}S = \iint\limits_{D} f(x,h(,x,z),z) \sqrt{(\frac{\partial y}{\partial x})^2 + (\frac{\partial y}{\partial z})^2 + 1} \ \mathrm{d}A
+\end{equation*}
+
+\subsection{Surface Integrals of Vector Fields}
+
+Suppose that $S$ is an oriented surface with unit normal vector $\mathbf{n}$, and imagine a fluid with density $\rho(x,y,z)$ and velocity field $\mathbf{v}(x,y,z)$ flowing through $S$. (Think of $S$ as an imaginary surface that doesn't impeded the fluid flow like a fishing net across a stream.) Then the rate of flow (mass per unit time) per unit area is $\rho \mathbf{v}$. If we divide $S$ into small patches $S_{ij}$, then $S_{ij}$ is nearly planar and so we can approximate the mass of fluid per unit time crossing $S_{ij}$ in the direction of the normal $\mathbf{n}$ by the quantity
+
+\begin{equation*}
+    (\rho \mathbf{v} \cdot \mathbb{n})A(S_{ij})
+\end{equation*}
+
+where $\rho, \mathbf{v}, $ and $\mathbf{n}$ are evaluated at some point on $S_{ij}$, By summing these quantities and taking the limit we get, according to the definition from earlier the surface integral of the function $\rho \mathbf{v} \cdot \mathbf{n}$ over $S$:
+
+\begin{equation*}
+    \iint\limits_{S} \rho \mathbf{v} \cdot \mathbf{n} \ \mathrm{d}S = \iint\limits_{S} \rho(x,y,z) \mathbf{v}(x,y,z) \cdot \mathbf{n}(x,y,z) \ \mathrm{d}S
+\end{equation*}
+
+and this is interpreted physically as the rate of flow through $S$. 
+
+If we write $\mathbf{F} = \rho \mathbf{v}$, then $\mathbf{F}$ is also a vector field on $\mathbb{R}^3$ and the integral from before 
+
+\begin{equation*}
+    \iint\limits_{S} \mathbf{F} \cdot \mathbf{n} \ \mathrm{d}S
+\end{equation*}
+
+A surface integral of this form occurs frequently in physics, even when $\mathbf{F}$ is not in $\rho \mathbf{v}$, and is called the \textit{surface integral (or flux integral)} of $\mathbf{F}$ over $S$.
+\\
+If $\mathbf{F}$ is a continuous vector field defined on an oriented surface $S$ with unit normal vector $\mathbf{n}$, then the \textbf{surface integral of F over S} is 
+
+\begin{equation*}
+    \iint\limits_{S} \mathbf{F} \cdot \ \mathrm{d}S = \iint\limits_{S} \mathbf{F} \cdot \ \mathbf{n} \ \mathrm{d}S
+\end{equation*}
+
+This integral is also called the \textbf{flux} of \textbf{F} across $S$.
+
+In real fucking words, this definition above says that the surface integral of a vector field over $S$ is equal to the surface integral of its normal component over $S$ (as previously defined). 
+
+If $S$ is given by a vector function $\mathbf{r}(u,v)$, then $\mathbf{n}$ is given by $\mathbf{n} = \frac{\mathbf{r}_u \times \mathbf{r}_v}{\rvert \mathbf{r}_u \times \mathbf{r}_v \rvert}$ and from the definition above we have
+
+\begin{equation*}
+    \iint\limits_{S} \mathbf{F} \cdot \ \mathrm{d} S = \iint\limits_{S} \mathbf{F}  \cdot \ \frac{\mathbf{r}_u \times \mathbf{r}_v }{\rvert \mathbf{r}_u \times \mathbf{r}_v \rvert} \ \mathrm{d}S
+\end{equation*}
+
+this is equal to 
+
+\begin{equation*}
+    \iint\limits_{D} [\mathbf{F}(\mathbf{r}(u,v)) \cdot \frac{\mathbf{r}_u \times \mathbf{r}_v }{\rvert \mathbf{r}_u \times \mathbf{r}_v \rvert}] \rvert \mathbf{r}_u \times \mathbf{r}_v \rvert \ \mathrm{d}A
+\end{equation*}
+
+where $D$ is the parameter domain. Thus we have
+
+\begin{equation*}
+    \iint\limits_{S} \mathbf{F} \cdot \ \mathrm{d}S = \iint\limits_{D} \mathbf{F} \cdot \ (\mathbf{r}_u \times \mathbf{r}_v) \ \mathrm{d}A
+\end{equation*}
 
 
 \end{document}

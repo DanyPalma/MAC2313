@@ -19,3 +19,6 @@
 \contentsline {subsection}{\numberline {7.1}Tangent Planes}{15}{}%
 \contentsline {subsection}{\numberline {7.2}Surface Area}{16}{}%
 \contentsline {section}{\numberline {8}Surface Integrals}{17}{}%
+\contentsline {subsection}{\numberline {8.1}Parametric Surfaces}{17}{}%
+\contentsline {subsection}{\numberline {8.2}Graphs of Functions}{17}{}%
+\contentsline {subsection}{\numberline {8.3}Surface Integrals of Vector Fields}{18}{}%
